@@ -75,20 +75,20 @@ INIT_USER_CONFIG = {
             # "u_id": "",
             "api_key": "mx0vglqofJZUljkoYU",
             "api_secret": "c6700595729849759d4e89989a7e0ecc",
-            "u_id": "WEB94a3d9e875e3066fd92fcca63d783f8fe90bdc835c036d59bce0a367fb36a3b6",
+            "u_id": "WEB9d373eef56bea35dcc68b613ba705138ada322ddca9728a0594628ff0a8ecf2f",
         },
         "fin_settings": {
-            "margin_size": None,
+            "margin_size": 21,
             "margin_mode": 2,
             "leverage": 16,
             "sl": None,
             "sl_type": 2,                                   
             "tp_levels": {"0-500": [10, 25, 50, 75, 100],
                 "500-1000": [5, 10, 15, 20, 30],
-                "1000+": [3, 7, 10],
+                "1000+": [3, 7, 10, 15, 20],
             },
             "tp_levels_gen": [x for x in TP_LEVELS_DEFAULT.copy() if x],
-            "tp_order_volume": 33
+            "tp_order_volume": 20
     }
     },
     "_await_field": None # system

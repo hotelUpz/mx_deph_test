@@ -58,10 +58,15 @@ class TgParser:
     def parse_marketcap(self, line: str) -> Optional[float]:
         line_norm = normalize_text(line)
 
+        # m_cap = re.search(
+        #     r"marketcap\s*[:\-–]?\s*\$?\s*([\d.,\s]+)\s*([kmbм]?)",
+        #     line_norm
+        # )
         m_cap = re.search(
-            r"marketcap\s*[:\-–]?\s*\$?\s*([\d.,\s]+)\s*([kmbм]?)",
+            r"(?:market\s*cap|marketcap|mcap|cap)\s*[:\-–]?\s*\$?\s*([\d.,\s]+)\s*([kmbм])?",
             line_norm
         )
+
         if not m_cap:
             return None
 
@@ -90,7 +95,8 @@ class TgParser:
         for line in lines:
             # символ токена
             if not result["symbol"]:
-                m_symbol = re.search(r"\$([a-z0-9]+)\b", line)
+                # m_symbol = re.search(r"\$([a-z0-9]+)\b", line)
+                m_symbol = re.search(r"\$([a-z0-9]+)", line)
                 if m_symbol:
                     result["symbol"] = m_symbol.group(1).upper() + "_USDT"
 
