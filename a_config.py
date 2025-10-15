@@ -9,10 +9,10 @@ DIRECTION: str = "LONG"
 TEG_ANCHOR: str = "UPBIT LISTING"              
 
 # TG_BOT_TOKEN: str = "7976740718:AAE1xBujUM26JfvefRr1hkcA12yfUC9e9qk" # bot token
-# TG_GROUP_ID: str = "-1002653345160" # id группы откуда парсить сигнал
-# TG_BOT_TOKEN: str = "8320057395:AAFD1Zing02A9q5RKrnUw3SEaQbyg8UPU7c" # -- токен бота (real my)
-TG_BOT_TOKEN: str = "8112036801:AAHOVza_DoL7gFwJiITpXIdZRi8yOMtmihI" # -- токен бота (test)
-TG_GROUP_ID: str = "-1003053085303" # -- id группы откуда парсить сигнал (test)
+TG_GROUP_ID: str = "-1002653345160" # id группы откуда парсить сигнал
+TG_BOT_TOKEN: str = "8320057395:AAFD1Zing02A9q5RKrnUw3SEaQbyg8UPU7c" # -- токен бота (real my)
+# TG_BOT_TOKEN: str = "8112036801:AAHOVza_DoL7gFwJiITpXIdZRi8yOMtmihI" # -- токен бота (test)
+# TG_GROUP_ID: str = "-1003053085303" # -- id группы откуда парсить сигнал (test)
 # 
 # //
 CAP_MULTIPLITER_TRUE: bool = False           # задействуем механизм зависомостей капы от множителя размера
@@ -78,9 +78,9 @@ INIT_USER_CONFIG = {
             "u_id": "WEB695592e91afa7437c737c52830a5395f82622852ea60c68d5d88fb644f43940b",
         },
         "fin_settings": {
-            "margin_size": 11,
+            "margin_size": 21,
             "margin_mode": 2,
-            "leverage": 5,
+            "leverage": 16,
             "sl": -20,
             "sl_type": 2,                                   
             "tp_levels": {"0-500": [10, 25, 50, 75, 100],
